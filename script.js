@@ -34,6 +34,7 @@ function insertNewRecord(data){
     var cell5 = newRow.insertCell(4);
         cell5.innerHTML = `<a href="#" onClick='onEdit(this)'>Edit</a>
                         <a href="#" onClick='onDelete(this)'>Delete</a>`;
+    document.querySelectorAll("th")[4].classList.remove("d-none");
 }
 
 
