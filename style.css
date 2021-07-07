@@ -6,6 +6,15 @@ body {
     padding: 75px 3vw;
 }
 
+.dark-theme {
+    background-color: hsl(230, 17%, 14%) !important;
+}
+
+.toggle {
+    position: absolute;
+    top: 5%;
+}
+
 .row {
     padding: 30px;
     border-radius: 10px;
@@ -14,9 +23,8 @@ body {
     transition: 0.5s;
 }
 
-.row:hover {
-    background-color: hsl(225, 100%, 98%);
-    transition: 0.5s;
+.row-dark {
+    background-color: hsl(228, 28%, 20%);
 }
 
 a {
@@ -33,6 +41,11 @@ input[type="submit"] , input[type="reset"] {
     border-radius: 5px;
     margin: 30px 0 20px;
     transition: 0.5s;
+}
+
+.btn-dark {
+    color: white !important;
+    background-color: hsl(348, 97%, 39%) !important;
 }
 
 .col-6 {
@@ -59,6 +72,11 @@ th {
 
 td , th{
     padding: 15px !important;
+}
+
+
+tr:nth-child(odd) , table.list thead > tr {
+    background-color: white;
 }
 
 tr:nth-child(even) , table.list thead > tr {
@@ -99,6 +117,9 @@ input[type="text"]{
     }
     input[type="reset"] {
         margin-top: 0;
+    }
+    .row {
+        margin-top: 50px;
     }
 }
 
