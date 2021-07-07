@@ -1,23 +1,75 @@
-body > table{
-    width: 80%;
-    margin: 40px auto;
-    background-color: rgb(104, 149, 218);
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 75px 3vw;
 }
-table{
-    border-collapse: collapse;
+
+.row {
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 10px solid hsl(348, 97%, 39%);
+    background-color: hsl(227, 47%, 96%);
+    transition: 0.5s;
 }
-table.list{
+
+.row:hover {
+    background-color: hsl(225, 100%, 98%);
+    transition: 0.5s;
+}
+
+a {
+    color: hsl(348, 97%, 39%) !important;
+    text-decoration: none !important;
+    padding: 3px !important;
+}
+
+input[type="submit"] , input[type="reset"] {
+    border: 2px solid hsl(348, 97%, 39%);
+    background-color: transparent;
+    padding: 10px 20px;
+    color: hsl(348, 97%, 39%);
+    border-radius: 5px;
+    margin: 30px 0 20px;
+    transition: 0.5s;
+}
+
+.col-6 {
+    width: 49% !important;
+}
+
+input[type="submit"]:hover , input[type="reset"]:hover {
+    background-color: hsl(348, 97%, 39%);
+    color: white;
+    transition: 0.5s;
+}
+
+table {
     width: 100%;
+    margin-top: 8px;
+    margin-bottom: 20px;
 }
-td, th{
-    border: 1px solid #ddd;
-    text-align: left;
-    padding: 8px 15px;
+
+th {
+    background-color: hsl(348, 97%, 39%) !important;
+    color: white;
+    vertical-align: middle;
 }
-tr:nth-child(even),table.list thead>tr{
-    background-color: #ddd;
+
+td , th{
+    padding: 15px !important;
 }
-input[type="text"], input[type="number"]{
+
+tr:nth-child(even) , table.list thead > tr {
+    background-color: #ffe0e6;
+}
+
+input {
+    width: 100% !important;
+}
+
+input[type="text"]{
     width: 91%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -25,16 +77,28 @@ input[type="text"], input[type="number"]{
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-input[type="submit"],input[type="reset"]{
-    background: #eee;
-    padding: 6px 12px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 30px;
-    border: none;
-    margin: 15px 0 10px;
-    outline: none;
+
+@media (max-width: 991px) {
+    table {
+        margin-top: 50px;
+    }
 }
-input[type="submit"]:hover{
-    background: #f3f3f3;
+
+@media (max-width:  576px) {
+    .row {
+        padding: 30px 10px;
+    }
 }
+
+@media (max-width: 400px) {
+    .col-6 {
+        width: 100% !important;
+    }
+    .d-flex {
+        flex-direction: column;
+    }
+    input[type="reset"] {
+        margin-top: 0;
+    }
+}
+
